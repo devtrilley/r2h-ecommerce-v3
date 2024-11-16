@@ -1,3 +1,9 @@
+// jQuery Code for Materialize Navbar
+// This code is used the DOM to make the sidenav appear after the page is loaded, IF we click the menu icon
+$(document).ready(function () {
+  $(".sidenav").sidenav();
+});
+
 // Product Class
 class Product {
   // Constructor method hold 4 parameters, all holding key product card information

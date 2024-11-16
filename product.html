@@ -5,32 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <title>Code Over Uni | Products</title>
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="header">
-      <nav class="nav">
-        <!-- Logo Container -->
-        <div class="nav__logo">Logo</div>
-        <!-- Links container in navbar -->
-        <div class="nav__links-container">
-          <!-- Individual links -->
-          <a href="index.html" class="nav__link">Home</a>
-          <a href="product.html" class="nav__link">Products</a>
-          <a href="contact.html" class="nav__link">Contact</a>
+      <nav class="nav-wrapper black">
+        <div class="container">
+          <a href="#" class="brand-logo">Code Over Uni</a>
+          <a href="#" class="sidenav-trigger" data-target="mobile-links">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="index.html" class="nav__link">Home</a></li>
+            <li><a href="product.html" class="nav__link">Products</a></li>
+            <li><a href="contact.html" class="nav__link">Contact</a></li>
+          </ul>
         </div>
       </nav>
+      <ul class="sidenav" id="mobile-links">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="product.html" class="nav__link">Products</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
     </header>
 
     <main>
       <!-- Grid container that holds our product cards, all generated in JS -->
-      <div class="grid">
-        <!-- Product card: We'll make one, to style, then autogenerate the rest with JS -->
-        <div class="card">
-          <img src="" alt="" />
-          <p>Name</p>
-          <p>Price</p>
-          <p>Description</p>
-          photo, name, price and a quick description.
+      <div class="container">
+        <div class="row">
+          <!-- Product card: We'll make one, to style, then autogenerate the rest with JS -->
+          <div class="col s6 card">
+            <img class="card__image card--image" src="https://m.media-amazon.com/images/I/61j3wQheLXL._AC_SL1500_.jpg" alt="" />
+            <p class="card__name card--name">Name</p>
+            <p class="card__price card--price">Price</p>
+            <p class="card__description card--description">Description</p>
+            photo, name, price and a quick description.
+          </div>
         </div>
       </div>
     </main>
@@ -38,6 +57,9 @@
     <!-- Do the footer last so we'll know how to place it at the bottom -->
     <footer></footer>
 
+    <!-- My JS file -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
