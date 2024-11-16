@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Code Over Uni | Contact</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <!-- Logo Container -->
+        <div class="nav__logo">Logo</div>
+        <!-- Links container in navbar -->
+        <div class="nav__links-container">
+          <!-- Individual links -->
+          <a href="index.html" class="nav__link">Home</a>
+          <a href="product.html" class="nav__link">Products</a>
+          <a href="contact.html" class="nav__link">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Form element: Consider adding name attribute to inputs?? i think?? -->
+      <form action="" class="form">
+        <!-- Label and textbox for First Name -->
+        <label for="fName" class="form__label">First Name:</label>
+        <input type="text" placeholder="" class="form__textbox" id="fName" />
+
+        <!-- Label and textbox for Last Name -->
+        <label for="lName" class="form__label">Last Name</label>
+        <input type="text" placeholder="" class="form__textbox" id="lName" />
+
+        <!-- Label and textbox for Email  -->
+        <label for="email" class="form__label">Email:</label>
+        <input type="email" placeholder="" class="form__textbox" id="email" />
+
+        <!-- Label and textbox for Telephone -->
+        <label for="tele" class="form__label">Phone Number:</label>
+        <input type="tel" placeholder="" class="form__textbox" id="tele" />
+
+        <!-- Label and Dropdown menu for Contact Reasons -->
+        <label for="contact-reasons" class="form__label"
+          >Reason for Contact:</label
+        >
+        <!-- Figure out what the value att. should be -->
+        <select name="contact-reasons" id="contact-reasons">
+          <option value="">Private Tutoring</option>
+          <option value="">Sponsorships</option>
+          <option value="">Collaboration</option>
+          <option value="">Content Requests</option>
+          <option value="">Site Errors/Bugs</option>
+          <option value="">Other</option>
+        </select>
+
+        <label for="">Comments:</label>
+        <textarea
+          name=""
+          id=""
+          placeholder="Enter any additional that we may need..."
+        ></textarea>
+      </form>
+    </main>
+
+    <!-- Do the footer last so we'll know how to place it at the bottom -->
+    <footer></footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
