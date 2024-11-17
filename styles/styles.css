@@ -1,6 +1,3 @@
-/* ROOT */
-/* Even though my colors are just black and white, in the future if I ever want to change the color pallet,
-I can easily just update the custom variables here. */
 :root {
   --primary-color: black;
   --secondary-color: white;
@@ -9,83 +6,55 @@ I can easily just update the custom variables here. */
   --tertiary-color-active: #55abf2;
 }
 
-/* CSS Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+main {
+  display: flex;
+  flex-direction: column;
+}
+.img-container {
+  border: 3px solid white;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
-.product-grid-container {
-  padding: 2rem 4rem;
+.banner-img {
+  width: 100%;
 }
 
-.header {
+.home-heading {
   text-align: center;
 }
 
-/* PRODUCT GRID STYLINGS */
-.product-grid {
-  gap: 10px;
-  margin: 0 auto; /* Center the grid */
+.brand-line {
+  display: block;
+  font-size: 6rem;
 }
 
-/* PRODUCT CARD STYLINGS */
-.product-card {
+.logo {
+  width: 40%;
+  border-radius: 50%;
+  box-shadow: 0px 0px 40px #71b3ea;
+}
+
+/* Tom Rilley headshot */
+.headshot {
+  width: 100%;
+}
+
+.custom-figure {
   display: flex;
-  border: 2px solid rgb(80, 149, 245);
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
-}
-
-.product-card__image,
-.product-card__name,
-.product-card__price,
-.product-card__description {
-  width: 100%;
+  justify-content: center;
   text-align: center;
 }
 
-/* I want name to be slightly smaller than price */
-.product-card__name {
-  font-size: 1.25rem;
-}
+@media (min-width: 800px) {
+  .headshot {
+    width: 70%;
+  }
 
-/* Bigger focal point on card */
-.product-card__price {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.product-card__name {
-}
-
-.product-card__image {
-  aspect-ratio: 1;
-  object-fit: cover;
-}
-
-.product-card__description {
-  font-style: italic;
-}
-
-.product-card__button {
-  border: none;
-  padding: 1.5rem 1rem;
-  width: 100%;
-  font-size: 1.25rem;
-  background-color: var(--tertiary-color);
-  color: white;
-  cursor: pointer;
-}
-.product-card__button:hover {
-  background-color: var(--tertiary-color-hover);
-}
-.product-card__button:active {
-  background-color: var(--tertiary-color-active);
-}
-
-.store-heading {
-  text-align: center;
+  .logo {
+    width: 25%;
+  }
 }
