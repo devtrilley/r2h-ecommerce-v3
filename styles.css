@@ -1,18 +1,75 @@
+/* ROOT */
+/* Even though my colors are just black and white, in the future if I ever want to change the color pallet,
+I can easily just update the custom variables here. */
+:root {
+  --primary-color: black;
+  --secondary-color: white;
+  --tertiary-color: #8a00ff;
+  --tertiary-color-hover: #7b00e8;
+  --tertiary-color-active: #7101d3;
+}
+
+/* CSS Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.card__image {
+/* PRODUCT CARD STYLINGS */
+.product-card {
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+.product-card__image,
+.product-card__name,
+.product-card__price,
+.product-card__description {
   width: 100%;
+  text-align: center;
 }
-.card__name {
-  
+
+.product-card__name {
+  font-size: 1.25rem;
 }
-.card__price {
-  
+
+.product-card__price {
+  font-size: 1.5rem;
 }
-.card__description {
-  
+
+.product-card__image {
+  width: 100%; /*Ensures product image only takes up the width of the card*/
+  border: 1px solid;
+}
+
+.product-card__name {
+  border: 1px solid;
+}
+
+.product-card__price {
+  border: 1px solid;
+}
+
+.product-card__description {
+  border: 1px solid;
+  font-style: italic;
+}
+
+.product-card__button {
+  border: none;
+  padding: 1rem;
+  width: 100%;
+  background-color: var(--tertiary-color);
+  color: white;
+  cursor: pointer;
+}
+.product-card__button:hover {
+  background-color: var(--tertiary-color-hover);
+}
+.product-card__button:active {
+  background-color: var(--tertiary-color-active);
 }
