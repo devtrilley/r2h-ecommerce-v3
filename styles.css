@@ -4,7 +4,7 @@ I can easily just update the custom variables here. */
 :root {
   --primary-color: black;
   --secondary-color: white;
-  --tertiary-color: #2196F3;
+  --tertiary-color: #2196f3;
   --tertiary-color-hover: #3ea2f4;
   --tertiary-color-active: #55abf2;
 }
@@ -28,7 +28,6 @@ I can easily just update the custom variables here. */
 .product-grid {
   gap: 10px;
   margin: 0 auto; /* Center the grid */
-  
 }
 
 /* PRODUCT CARD STYLINGS */
@@ -56,6 +55,7 @@ I can easily just update the custom variables here. */
 /* Bigger focal point on card */
 .product-card__price {
   font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .product-card__name {
