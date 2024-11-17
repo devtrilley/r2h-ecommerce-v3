@@ -75,3 +75,27 @@ main {
     margin-left: 1rem;
   }
 }
+
+.submit-button {
+  background-color: var(--tertiary-color);
+  color: white;
+  padding: 1.5rem 3rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+  background-color: var(--tertiary-color-hover);
+}
+.submit-button:active {
+  background-color: var(--tertiary-color-active);
+}
+
+.error-message {
+  color: red;
+  font-size: 1.75rem;
+  text-align: center;
+}

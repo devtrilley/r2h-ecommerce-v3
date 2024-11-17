@@ -43,8 +43,17 @@
       <h2 class="contact-subheading">
         Fill out this form and we'll get back to you shortly...
       </h2>
+
       <!-- Form element: Consider adding name attribute to inputs?? i think?? -->
-      <form action="" class="browser-default">
+      <form class="browser-default contact-form">
+        <!-- Form Error Messages -->
+        <div class="error-container">
+          <p class="error-message fname-error"></p>
+          <p class="error-message lname-error"></p>
+          <p class="error-message email-error"></p>
+          <p class="error-message tele-error"></p>
+          <p class="error-message textarea-error"></p>
+        </div>
         <!-- Label and textbox for First Name -->
         <div class="input-pair-container">
           <label for="fName" class="browser-default custom-label"
@@ -103,13 +112,25 @@
             name="contact-reasons"
             id="contact-reasons"
             class="browser-default custom-dropdown"
+            required
           >
-            <option value="" class="browser-default">Private Tutoring</option>
-            <option value="" class="browser-default">Sponsorships</option>
-            <option value="" class="browser-default">Collaboration</option>
-            <option value="" class="browser-default">Content Requests</option>
-            <option value="" class="browser-default">Site Errors/Bugs</option>
-            <option value="" class="browser-default">Other</option>
+            <option value="" class="browser-default" selected disabled>Select a reason</option>
+            <option value="private-tutoring" class="browser-default">
+              Private Tutoring
+            </option>
+            <option value="sponsorships" class="browser-default">
+              Sponsorships
+            </option>
+            <option value="collaboration" class="browser-default">
+              Collaboration
+            </option>
+            <option value="content-requests" class="browser-default">
+              Content Requests
+            </option>
+            <option value="site-errors" class="browser-default">
+              Site Errors/Bugs
+            </option>
+            <option value="other" class="browser-default">Other</option>
           </select>
         </div>
 
@@ -124,6 +145,10 @@
             id="extra-comments"
             placeholder="Enter any additional that we may need..."
           ></textarea>
+        </div>
+
+        <div class="container center">
+          <input type="submit" class="submit-button" />
         </div>
       </form>
     </main>
@@ -187,5 +212,6 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="../scripts/script.js"></script>
+    <script src="../scripts/form.js"></script>
   </body>
 </html>
