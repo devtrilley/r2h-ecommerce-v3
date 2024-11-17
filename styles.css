@@ -18,8 +18,8 @@ I can easily just update the custom variables here. */
 
 /* PRODUCT CARD STYLINGS */
 .product-card {
-  border: 1px solid;
   display: flex;
+  border: 1px solid;
   flex-direction: column;
   align-items: center;
   padding: 40px;
@@ -33,29 +33,25 @@ I can easily just update the custom variables here. */
   text-align: center;
 }
 
+/* I want name to be slightly smaller than price */
 .product-card__name {
   font-size: 1.25rem;
 }
 
+/* Bigger focal point on card */
 .product-card__price {
   font-size: 1.5rem;
 }
 
-.product-card__image {
-  width: 100%; /*Ensures product image only takes up the width of the card*/
-  border: 1px solid;
-}
-
 .product-card__name {
-  border: 1px solid;
 }
 
-.product-card__price {
-  border: 1px solid;
+.product-card__image {
+  aspect-ratio: 1;
+  object-fit: cover;
 }
 
 .product-card__description {
-  border: 1px solid;
   font-style: italic;
 }
 
