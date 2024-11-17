@@ -4,9 +4,9 @@ I can easily just update the custom variables here. */
 :root {
   --primary-color: black;
   --secondary-color: white;
-  --tertiary-color: #8a00ff;
-  --tertiary-color-hover: #7b00e8;
-  --tertiary-color-active: #7101d3;
+  --tertiary-color: #2196F3;
+  --tertiary-color-hover: #3ea2f4;
+  --tertiary-color-active: #55abf2;
 }
 
 /* CSS Reset */
@@ -84,4 +84,8 @@ I can easily just update the custom variables here. */
 }
 .product-card__button:active {
   background-color: var(--tertiary-color-active);
+}
+
+.store-heading {
+  text-align: center;
 }
