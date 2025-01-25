@@ -1,0 +1,5 @@
+Link to eCommerce Site GitHub Repository:
+https://github.com/devtrilley/r2h-ecommerce-site
+
+Link to eCommerce AWS Deployment:
+https://main.d9trcm7eha9pk.amplifyapp.com/
