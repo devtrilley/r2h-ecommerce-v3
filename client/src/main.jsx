@@ -1,10 +1,14 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./styles/index.css";
+import App from "./App.jsx";
+import { BrowserRouter } from "react-router-dom";
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
-  </StrictMode>,
-)
+    {/* We wrap BrowserRouter around our app component to ensure our routing works globally in our app. <Link>s in header for example. Without this, <Header> and <Footer> wont render */}
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </StrictMode>
+);
