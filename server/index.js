@@ -4,10 +4,15 @@
 const express = require("express"); // Server
 const mysql = require("mysql2"); // DB syncing
 const dotenv = require("dotenv").config(); // DB creds. .config() activate it
-const cors = require("cors"); // Security
+// Cross Origin Resource Sharing = npm module middleware that permits request from different origins (Ex) Client and Server aka Frontend and Backend)
+const cors = require("cors"); // Allows frontend to fetch data from backend
 
 const app = express();
 const PORT = process.env.PORT || 3000; // Local Dev
+
+// MIDDLEWARE = function that processes requests and responses before the reach their final destination (that being their server-side route handler, or the client/user)
+// Middleware that allows data request from Vite's frontend to the backend/server
+app.use(cors());
 
 // Middleware that parses JSON in requests
 app.use(express.json());
