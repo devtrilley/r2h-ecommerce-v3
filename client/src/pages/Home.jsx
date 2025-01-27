@@ -1,18 +1,24 @@
 // Home Page: Just the <main> from v1's corresponding HTML refactored into JSX
 
+// Importing Slider/Carousel
+import HomeSlider from '../components/HomeSlider'
+
 // Importing css file from v1 for Home page
 import '../styles/home.css'
 
 export default function Home() {
   return (
     <main>
-      <div className="img-container">
+      {/* Hero Section */}
+      <HomeSlider/>
+
+      {/* <div className="img-container">
         <img
           src="images/code-over-uni-banner.png"
           alt="Code Over Uni Banner Image"
           className="banner-img"
         />
-      </div>
+      </div> */}
 
       <h1 className="home-heading">
         Welcome to

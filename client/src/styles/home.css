@@ -10,6 +10,23 @@ main {
   display: flex;
   flex-direction: column;
 }
+
+/* Ensure slider spans the full width of the viewport */
+/* Default class from react-slick, no need to add class manually */
+.slider-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Ensures slider images take full width  */
+/* Default class from react-slick, no need to add class manually */
+.slider-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Container for Tom Rilley Headshot */
 .img-container {
   border: 3px solid white;
   display: flex;
