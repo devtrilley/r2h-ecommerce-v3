@@ -1,0 +1,21 @@
+# mplify.yml = "build specification" file used by AWS Amplify to define how your application should be built and deployed.
+# Layman's Terms: File tells AWS Amplify how to build our React App, otherwise it wouldn't know
+# This is different compared to v1's use of index.html in the root. We essentially replaced that with this file
+
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - cd client # Move into your React project folder
+        - npm install # Install dependencies
+    build:
+      commands:
+        - npm run build # Build your React app
+  artifacts:
+    baseDirectory: client/dist # Path to your built React app
+    files:
+      - "**/*" # Include all files in the dist folder
+  cache:
+    paths:
+      - node_modules/**/* # Cache dependencies for faster builds
