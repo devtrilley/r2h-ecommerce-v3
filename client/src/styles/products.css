@@ -58,9 +58,6 @@ I can easily just update the custom variables here. */
   font-weight: bold;
 }
 
-.product-card__name {
-}
-
 .product-card__image {
   aspect-ratio: 1;
   object-fit: cover;
