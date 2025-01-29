@@ -20,7 +20,7 @@ export default function Products() {
 
   // useEffect to grab products from backend/server after component renders
   useEffect(() => {
-    fetch("http://localhost:3000/products")
+    fetch("https://r2h-ecommerce-site.onrender.com/products")
       .then((response) => response.json())
       .then((data) => {
         setProducts(data); // Store all products from DB
