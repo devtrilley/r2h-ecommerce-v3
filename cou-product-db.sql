@@ -66,5 +66,12 @@ VALUES
  'https://m.media-amazon.com/images/I/81mvpMiGobL._AC_SY879_.jpg', 
  'https://www.amazon.com/Fruit-Loom-Eversoft-Sweatpants-Bottom-Grey/dp/B09R8R81Q7', 
  'Photo of casual grey sweatpants');
+ 
+ALTER TABLE products ADD COLUMN type VARCHAR(10);
+UPDATE products SET type = 'Tech' WHERE id IN (1, 2, 3); -- IDs for tech products
+UPDATE products SET type = 'Clothes' WHERE id IN (4, 5, 6); -- IDs for clothing products
+UPDATE products SET type = 'Misc' WHERE id IN (7, 8, 9); -- IDs for miscellaneous products
+
+
 
 SELECT * FROM products;

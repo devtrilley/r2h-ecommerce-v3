@@ -21,22 +21,23 @@ app.listen(PORT, () =>
   console.log(`Server is running @ http://localhost:${PORT}`)
 );
 
-// Connecting to MySQL 'ecommerceV2' DB and passes creds in obj
+
 const connection = mysql.createConnection({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
-  password: process.env.DB_PASS,
+  password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
 });
 
-// Success and error messages if database connects or not
 connection.connect((err) => {
   if (err) {
-    console.error(`Database connection failed: ${err}`);
-  } else {
-    console.log("Connected to MySQL database!");
+    console.error('Database connection failed:', err);
+    return;
   }
+  console.log('Connected to the RDS MySQL database.');
 });
+
+module.exports = connection;
 
 // GETs our product information from our DB
 app.get("/products", (req, res) => {
@@ -45,7 +46,7 @@ app.get("/products", (req, res) => {
 
   // Run the query
   connection.query(query, (err, results) => {
-    // Erro handling if we can't fetch products from table 
+    // Erro handling if we can't fetch products from table
     if (err) {
       console.error(`Error fetching products: ${err}`);
       return res.status(500).send(err);
