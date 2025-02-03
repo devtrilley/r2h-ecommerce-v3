@@ -31,7 +31,7 @@ export default function HomeSlider(params) {
         <img src="images/tom-welcome.png" alt="Slide 2 - Tom Rilley Welcome Message" className="slider-image" />
       </div>
       <div>
-        <a ><img src="images/codewars-vid.png" alt="Slide 3 - Code Over Uni Code Codewars video thumbnail" className="slider-image" /></a>
+        <img src="images/codewars-vid.png" alt="Slide 3 - Code Over Uni Code Codewars video thumbnail" className="slider-image" />
       </div>
     </Slider>
   );

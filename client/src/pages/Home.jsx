@@ -37,7 +37,7 @@ export default function Home() {
         <p className="flow-text">
           Code Over Uni is a project by Tom Rilley that offers high-quality
           educational computer science videos accessible to all. Tom Rilley
-          started CodeOverUni after teaching himself how to code online as a
+          started Code Over Uni after teaching himself how to code online as a
           teenager. Tom wanted to create a site that would give programming
           beginners the guidance they need. Tom Rilley started Code Over Uni
           after teaching himself how to code online as a teenager. Tom wanted to
@@ -78,7 +78,7 @@ export default function Home() {
           The purpose of this site is to serve as the home of Code Over Uni's
           merch store. This is where we sell all of our branded products as well
           as our affiliate partner links. If you would like to support
-          CodeOverUni's vision, please consider buying a product from our store
+          Code Over Uni's vision, please consider buying a product from our store
           <a href="pages/product.html"> HERE</a>. On top of our store, backlogs
           of Code Over Uni videos and blogs will be placed on this site as well.
           Feel free to explore!

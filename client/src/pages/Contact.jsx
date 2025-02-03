@@ -15,7 +15,7 @@ export default function Contact() {
 
   // Much like useState, calling useForm returns these 2 functions and an obj
   const {
-    register, // Connects inputs to useForm() hook's state
+    register, // Connects an input to useForm() hook's state, done on each input
     handleSubmit, // runs after forms submitted, also handles preventDefault() and runs onSubmit() instead (below this function)
     formState: { errors }, // obj holds error messages and form validation
     reset, // Clears input fields after submission

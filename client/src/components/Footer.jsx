@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container">
         <div className="row">
           <div className="col s12 l6">
-            <h5>Cover Over Uni</h5>
+            <h5>Code Over Uni</h5>
             <p>
               Code Over Uni is an educational brand dedicated to the quick and
               efficient teaching of computer science principles, in order to

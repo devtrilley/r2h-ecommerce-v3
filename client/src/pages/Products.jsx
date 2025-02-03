@@ -3,6 +3,7 @@
 // Importing css file from v1 for products page
 import { useState, useEffect } from "react";
 import "../styles/products.css";
+import ProductCard from "../components/ProductCard";
 
 // This is the only page where the product card is used, so there's no point in making a separate component for it
 export default function Products() {
@@ -33,7 +34,7 @@ export default function Products() {
   useEffect(() => {
     const elems = document.querySelectorAll("select");
     M.FormSelect.init(elems);
-  }, []);  
+  }, []);
 
   // useEffect to filter products
   useEffect(() => {
@@ -64,7 +65,7 @@ export default function Products() {
               type="range"
               id="priceMax"
               min="0"
-              max="80" 
+              max="80"
               value={priceMax}
               onChange={(e) => setPriceMax(Number(e.target.value))}
             />
@@ -73,7 +74,9 @@ export default function Products() {
           {/* Product Type Filter (input-field required by materialize for <select>)*/}
           <div className="filter input-field">
             {/* "active" class placed label above selections */}
-            <label htmlFor="productType" className="active">Product Type:</label>
+            <label htmlFor="productType" className="active">
+              Product Type:
+            </label>
             {/* Dropdown menu */}
             <select
               id="productType"
@@ -90,21 +93,16 @@ export default function Products() {
 
         {/* The product grid itself */}
         <div className="row product-grid">
-          {/* Using .map() to dynamically render each product card from filteredProducts state array, rather than our products array originally. This way only the items that pass our filter will be rendered */}
+          {/* Using .map() to dynamically render each ProductCard component using info from filteredProducts state array, rather than our products array originally. This way only the items that pass our filter will be rendered. */}
           {filteredProducts.map((product) => (
-            <div key={product.id} className="col s12 m6 l4 product-card">
-              <img
-                src={product.image_url}
-                alt={product.name}
-                className="product-card__image"
-              />
-              <div className="product-card__name">{product.name}</div>
-              <div className="product-card__price">${product.price}</div>
-              <div className="product-card__description">
-                {product.description}
-              </div>
-              <button className="product-card__button">Buy Now</button>
-            </div>
+            // Utilizing props to ensure info stays consistent for each indie product
+            <ProductCard 
+              key={product.id}
+              image_url={product.image_url}
+              name={product.name}
+              price={product.price}
+              description={product.description}
+            />
           ))}
         </div>
       </div>
