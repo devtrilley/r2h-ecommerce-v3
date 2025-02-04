@@ -3,11 +3,11 @@ This repository contains the refactored version of my React-based eCommerce proj
 
 Hosted Application
 The application is hosted on AWS Amplify and can be accessed here:
-Live Demo
+[Live Demo](https://main.d9trcm7eha9pk.amplifyapp.com/)
 
 Original Repository
 The original repository containing the hosted version of the application is available here:
-Original GitHub Repository
+[Original GitHub Repository](https://github.com/devtrilley/r2h-ecommerce-site)
 
 Known Issue: Product Loading Delay
 Description
