@@ -9,6 +9,12 @@ import { useForm } from "react-hook-form";
 // Importing css file from v1 for Contact page
 import "../styles/contact.css";
 
+// Importing InputField component for simpler syntax
+import InputField from "../components/InputField";
+
+// Importing Button component for our submit button
+import Button from "../components/Button";
+
 export default function Contact() {
   // Default of false, meaning not submitted
   const [submitted, setSubmitted] = useState(false);
@@ -52,104 +58,80 @@ export default function Contact() {
         onSubmit={handleSubmit(onSubmit)}
       >
         {/* Label and textbox for FIRST NAME */}
-        <div className="input-pair-container">
-          <label htmlFor="fName" className="browser-default custom-label">
-            First Name:
-          </label>
-          <input
-            type="text"
-            placeholder="Ex: John"
-            className="browser-default custom-textbox"
-            id="fName"
-            {...register("fname", {
-              required: "First name is required.",
-              minLength: {
-                value: 2,
-                message: "First name must be at least 2 characters",
-              },
-              maxLength: {
-                value: 30,
-                message: "First name must be no more than 30 characters",
-              },
-            })}
-          />
-          {errors.fname && (
-            <p className="error-message">{errors.fname.message}</p>
-          )}
-        </div>
+        <InputField
+          type="text"
+          id="fName"
+          label="First Name:"
+          placeholder="Ex: John"
+          register={register}
+          validation={{
+            required: "First name is required.",
+            minLength: {
+              value: 2,
+              message: "First name must be at least 2 characters",
+            },
+            maxLength: {
+              value: 30,
+              message: "First name must be no more than 30 characters",
+            },
+          }}
+          errors={errors}
+        />
 
         {/* Label and textbox for LAST NAME */}
-        <div className="input-pair-container">
-          <label htmlFor="lName" className="browser-default custom-label">
-            Last Name:
-          </label>
-          <input
-            type="text"
-            placeholder="Ex: John"
-            className="browser-default custom-textbox"
-            id="lName"
-            {...register("lname", {
-              required: "Last name is required.",
-              minLength: {
-                value: 2,
-                message: "Last name must be at least 2 characters",
-              },
-              maxLength: {
-                value: 30,
-                message: "Last name must be no more than 30 characters",
-              },
-            })}
-          />
-          {errors.lname && (
-            <p className="error-message">{errors.lname.message}</p>
-          )}
-        </div>
+        <InputField
+          type="text"
+          id="lName"
+          label="Last Name:"
+          placeholder="Ex: Stamos"
+          register={register}
+          validation={{
+            required: "Last name is required.",
+            minLength: {
+              value: 2,
+              message: "Last name must be at least 2 characters",
+            },
+            maxLength: {
+              value: 30,
+              message: "Last name must be no more than 30 characters",
+            },
+          }}
+          errors={errors}
+        />
 
         {/* Label and textbox for EMAIL ADDRESS  */}
-        <div className="input-pair-container">
-          <label htmlFor="email" className="browser-default custom-label">
-            Email:
-          </label>
-          <input
-            type="email"
-            placeholder="Ex: jstamos88@gmail.com"
-            className="browser-default custom-textbox"
-            id="email"
-            {...register("email", {
-              required: "Email is required.",
-              pattern: {
-                value: /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/,
-                message: "Invalid email address.",
-              },
-            })}
-          />
-          {errors.email && (
-            <p className="error-message">{errors.email.message}</p>
-          )}
-        </div>
+        <InputField
+          type="email"
+          id="email"
+          label="Email:"
+          placeholder="Ex: jstamos88@gmail.com"
+          register={register}
+          validation={{
+            required: "Email is required.",
+            pattern: {
+              value: /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/,
+              message: "Invalid email address.",
+            },
+          }}
+          errors={errors}
+        />
 
         {/* Label and textbox for Telephone */}
-        <div className="input-pair-container">
-          <label htmlFor="tele" className="browser-default custom-label">
-            Phone Number:
-          </label>
-          <input
-            type="tel"
-            placeholder="Ex: 704-330-8271"
-            className="browser-default custom-textbox"
-            id="tele"
-            {...register("tele", {
-              required: "Phone number is required.",
-              pattern: {
-                value: /^\d{10}$/,
-                message: "Phone number must be exactly 10 digits.",
-              },
-            })}
-          />
-          {errors.tele && (
-            <p className="error-message">{errors.tele.message}</p>
-          )}
-        </div>
+        <InputField
+          type="tel"
+          id="tele"
+          label="Phone Number:"
+          placeholder="Ex: 678-999-8212"
+          register={register}
+          validation={{
+            required: "Phone number is required.",
+            pattern: {
+              value: /^\d{10}$/,
+              message: "Phone number must be exactly 10 digits.",
+            },
+          }}
+          errors={errors}
+        />
 
         {/* Label and Dropdown menu for Contact Reasons */}
         <div className="input-pair-container">
@@ -224,7 +206,7 @@ export default function Contact() {
         </div>
 
         <div className="container center">
-          <input type="submit" className="submit-button" />
+          <Button type="submit" styling="submit-button" text="Submit" />
         </div>
       </form>
     </main>
