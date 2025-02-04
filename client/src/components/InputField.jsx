@@ -9,7 +9,6 @@ export default function InputField({
   register, // useForm register() func
   validation, //
   errors, // Error handling/messages
-  options, //
 }) {
   {
     /* Label and textbox for Input */
